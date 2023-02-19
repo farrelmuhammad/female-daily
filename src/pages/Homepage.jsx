@@ -9,7 +9,7 @@ const Homepage = () => {
         <>
             <Header />
             <TopFrame />
-            <Billboard text="Billoard 970x270" />
+            <Billboard text="Billboard 970x270" />
             <EditorChoice />
         </>
     )

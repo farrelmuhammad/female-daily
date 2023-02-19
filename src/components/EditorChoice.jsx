@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import fetch from '../helpers/fetch';
+import useAsync from '../helpers/hooks/useAsync';
 
 const EditorChoice = () => {
+    const { data, error, run, isLoading } = useAsync();
+
+//   const refContainer = useRef(null);
+
+  useEffect(() => {
+    run(
+      fetch({
+        url: "/hqms/FDN-WP/0.1/wp",
+      })
+    );
+  }, [run]);
+
+  console.log(data);
+
     return (
         <>
             <div className="flex flex-col justify-items-start px-8 py-8">
